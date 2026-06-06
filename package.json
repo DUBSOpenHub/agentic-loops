@@ -1,0 +1,35 @@
+{
+  "name": "agentic-loops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone agentic loop templates, examples, and safety utilities.",
+  "author": "Gregg Cochran <greggcochran@github.com>",
+  "scripts": {
+    "check": "node --check shared/loop.js && node --check shared/logger.js && node --check shared/state-store.js && node --check shared/approvals.js && node --check scripts/run-loop.js && node --check scripts/new-loop.js && node --check loops/hello-loop/loop.js && node --check loops/repo-health-check/loop.js",
+    "test": "node --test",
+    "loop": "node scripts/run-loop.js",
+    "loop:hello": "node scripts/run-loop.js hello-loop",
+    "loop:repo-health": "node scripts/run-loop.js repo-health-check --target .",
+    "new-loop": "node scripts/new-loop.js",
+    "verify": "npm run check && npm test && npm run loop:hello && npm run loop:repo-health"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "agents",
+    "agentic-loops",
+    "automation",
+    "copilot"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DUBSOpenHub/agentic-loops.git"
+  },
+  "homepage": "https://github.com/DUBSOpenHub/agentic-loops#readme",
+  "bugs": {
+    "url": "https://github.com/DUBSOpenHub/agentic-loops/issues"
+  }
+}
